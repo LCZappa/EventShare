@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+.esqueci {
+	font-size: 9px;
+}
+.button {
+	width: 100%;
+}
+.edit {
+	background-color: #CCC;
+	border: thin solid #333;
+	width: 100%;
+}
+.errado {
+	background-color: #CCC;
+	border: thin solid #F00;
+	width: 100%;
+}
+.form_cell {
+	padding-left: 5px;
+	padding-right: 5px;
+}

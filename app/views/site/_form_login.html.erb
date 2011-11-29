@@ -1,0 +1,17 @@
+<% if @usuario %>
+	<%= @usuario.nome %>&nbsp;<%= link_to "Sair", :controller => "site", :action => "logout" %>
+<% else %>
+	<%= form_tag({:controller => "site", :action => "login"}, :method => "post", :name => "login", :onSubmit => "return ValidaLogin()") do %>
+		<%= hidden_field_tag "secret" %>
+		<table border="0">
+			<tr>
+				<td align="left" class="form_cell"><label>Usu&aacute;rio</label><br /><%= text_field_tag "usuario", nil, :class=>"edit"%></td>
+				<td align="left" class="form_cell"><label>Senha</label><br /><%= password_field_tag "senha", nil, :class=>"edit" %></td>
+				<td align="left" class="form_cell"><%= submit_tag "Login", :class => "button"%></td>
+			</tr>
+			<tr>
+				<td colspan="3" class="form_cell"><%= flash[:login_erro] %></td>
+			</tr>
+		</table>
+	<%end%>
+<% end %>
